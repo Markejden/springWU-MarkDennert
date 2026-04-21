@@ -1,0 +1,65 @@
+html{
+    overflow: hidden;
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+    scrollbar-width: none;
+}
+
+#wrapper1{
+    min-height: 200vh;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+    grid-template-areas: 
+    'nv1 nv1 nv1'
+    'hd1 hd1 hd1'
+    'mn1 mn1 mn1'
+    'ft1 ft1 ft1';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 14fr 2fr;
+}
+
+nav,header,div,footer{
+    outline: 2px rgb(255, 0, 0) solid;
+    background-color: #354f52;
+    padding: 20px;
+}
+
+#menu1{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.imagewrapper{
+    width: 20px;
+    height: 30px;
+    margin-bottom: 25px;
+}
+
+#nav1{
+    grid-area: nv1;
+}
+
+#header1{ 
+    grid-area: hd1;
+}
+
+#main1{
+    grid-area: mn1;
+}
+
+#footer1{
+    grid-area: ft1;
+}
