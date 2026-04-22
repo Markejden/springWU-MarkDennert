@@ -13,33 +13,33 @@ body{
     scrollbar-width: none;
 }
 
-#wrapper1{
+.wrapper{
+    padding: 5px;
     min-height: 200vh;
     max-width: 100%;
     margin: auto;
     display: grid;
-    /*gap: 10px;*/
-    backdrop-filter: blur(5px);
+    gap: 10px;
     box-sizing: border-box;
     grid-template-areas: 
-    'hd1 hd1 hd1'
-    'mn1 mn1 mn1'
-    'ft1 ft1 ft1';
+    'hd hd hd'
+    'mn mn mn';
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:2fr 14fr 2fr;
+    grid-template-rows:2fr 10fr;
 }
 
-header,footer,main{
-    outline: 2px rgb(255, 0, 0) solid;
-    background-color: #354f52;
+header,main{
+    outline: 2px #84a98c solid;
+    background-color: #cad2c5;
     padding: 20px;
+    border-radius: 10px;
 }
 
 
 .menu{
     height: 100vh;
-    width: 70vw;
-    background: rgb(127, 127, 255);
+    width: 40vw;
+    background: #52796f;
     position: fixed;
     top: 0;
     right: -90vw;
@@ -56,16 +56,26 @@ header,footer,main{
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 15;
-    box-shadow: 0px 5px 21px -10px rgb(155, 155, 155);
-    background-color: rgb(246, 239, 232);
+    z-index: 5;
+    box-shadow: 0px 5px 21px -10px rgb(0, 0, 0);
+    background-color: #84a98c;
     box-sizing: border-box;
     margin-top: 0;
-    padding: 2px 0;
+    padding: 2px 20px;
 }
 
 .menu-button i.material-icons{
-    font-size: 2.5rem;
+    font-size: 4rem;
+}
+
+i.material-icons{
+    opacity: 0.8;
+    transition: 0.3s;
+    cursor: pointer;
+}
+i.material-icons:hover{
+    opacity: 1;
+    font-size: 4.5rem;
 }
 
 .show{
@@ -80,21 +90,43 @@ header,footer,main{
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
     display: none;
-    z-index: 5;
+    z-index: 6;
 }
 
 .fade-layer.visible{
     display: block;
 }
 
-#header1{ 
-    grid-area: hd1;
+.header{ 
+    grid-area: hd;
 }
 
-#main1{
-    grid-area: mn1;
+.main{
+    grid-area: mn;
+    
 }
 
-#footer1{
-    grid-area: ft1;
+.footer{
+    grid-area: ft;
+    box-shadow: 0px -10px 20px -10px rgb(0, 0, 0);
+    background-color: #354f52;;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 600px) {
+    i.material-icons{
+        opacity: 1;
+    }
+    .menu-button i.material-icons{
+        font-size: 5rem;
+    }
+    .menu-button{
+        padding: 2px 10px;
+    }
+    .menu{
+        width: 70vw;
+    }
 }
