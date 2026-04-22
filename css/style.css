@@ -18,38 +18,73 @@ body{
     max-width: 100%;
     margin: auto;
     display: grid;
-    gap: 10px;
+    /*gap: 10px;*/
     backdrop-filter: blur(5px);
     box-sizing: border-box;
     grid-template-areas: 
-    'nv1 nv1 nv1'
     'hd1 hd1 hd1'
     'mn1 mn1 mn1'
     'ft1 ft1 ft1';
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 14fr 2fr;
+    grid-template-rows:2fr 14fr 2fr;
 }
 
-nav,header,div,footer{
+header,footer,main{
     outline: 2px rgb(255, 0, 0) solid;
     background-color: #354f52;
     padding: 20px;
 }
 
-#menu1{
+
+.menu{
+    height: 100vh;
+    width: 70vw;
+    background: rgb(127, 127, 255);
+    position: fixed;
+    top: 0;
+    right: -90vw;
+    transition: right 0.3s;
+    box-shadow: -10px 0px 21px -10px black;
+    z-index: 10;
+}
+
+.menu-button{
     width: 100%;
-    height: 100%;
-    object-fit: fill;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    box-shadow: 0px 5px 21px -10px rgb(155, 155, 155);
+    background-color: rgb(246, 239, 232);
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 2px 0;
 }
 
-.imagewrapper{
-    width: 20px;
-    height: 30px;
-    margin-bottom: 25px;
+.menu-button i.material-icons{
+    font-size: 2.5rem;
 }
 
-#nav1{
-    grid-area: nv1;
+.show{
+    right: 0;
+}
+
+.fade-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 5;
+}
+
+.fade-layer.visible{
+    display: block;
 }
 
 #header1{ 
