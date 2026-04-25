@@ -1,9 +1,12 @@
-document.querySelector(".fade-layer").addEventListener("click",showMenu);
-document.querySelector("i.material-icons").addEventListener("click",showMenu);
+const menu = document.querySelector(".menu");
+const layer = document.querySelector(".fade-layer");
+const icon = document.querySelector("i.material-icons");
 
-function showMenu(){
-    let menu = document.querySelector(".menu");
+function showMenu() {
     menu.classList.toggle("show");
-    let layer = document.querySelector(".fade-layer");
     layer.classList.toggle("visible");
+    document.body.style.overflow = menu.classList.contains("show") ? "hidden" : "";
 }
+
+icon.addEventListener("click", showMenu);
+layer.addEventListener("click", showMenu);
