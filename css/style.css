@@ -143,16 +143,16 @@ i.material-icons:hover {
 }
 
 .undertext {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 300;
-    color: rgba(8, 8, 8, 0.5);
+    color: rgba(8, 8, 8, 0.6);
     line-height: 1.6;
 }
 
 .main {
     grid-area: mn;
-    background-color: rgba(132, 169, 140, 0.2);
-    border: 1px solid rgba(132, 169, 140, 0.3);
+    background-color: rgb(167,190,169);
+    border: 1px solid rgba(132, 169, 140, 1);
     border-radius: 12px;
     padding: 32px;
     min-height: 400px;
@@ -169,13 +169,29 @@ i.material-icons:hover {
     flex-wrap: wrap;
 }
 
+#bg-canvas {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.submain{
+
+}
+
 @media (max-width: 600px) {
     .menu {
         width: 80vw;
     }
 
     .menu-button i.material-icons {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .wrapper {
