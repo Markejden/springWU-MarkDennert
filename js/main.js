@@ -25,7 +25,7 @@ function draw() {
 
     ctx.clearRect(0,0,w,h);
     ctx.strokeStyle = "#354f52";
-    ctx.lineWidth = 2;
+    ctx.lineWidth = 6;
     ctx.lineJoin = "round";
 
     function plot(fn){
@@ -49,6 +49,7 @@ function draw() {
         ctx.stroke();
     }
     plot(x=>x*Math.sin(x)+5);
+    plot(x=>-x*Math.sin(x)-5);
 }
 
 draw();
